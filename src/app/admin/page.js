@@ -4,7 +4,7 @@ import { TruckIcon } from "./icons/truckicon";
 
 export default function Home() {
   return (
-    <div className="w-[1440px] flex justify-center m-auto">
+    <div className="w-[1440px]  flex justify-center m-auto">
       <div className="w-80 bg-white">
         <div className="flex w-50 h-10">
           <Logo />
@@ -25,8 +25,8 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="w-full bg-[#E4E4E7] flex">
-        <div className="w-full h-20 bg-white mt-10">sadfghjkfd</div>
+      <div className="w-full bg-[#E4E4E7] h-[1000px] flex">
+        <div className="w-full bg-white "></div>
       </div>
     </div>
   );
