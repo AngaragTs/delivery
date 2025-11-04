@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Icon } from "./icons/icon";
 import { Logo } from "./icons/logo";
 import { TruckIcon } from "./icons/truckicon";
+import { UpDownIcon } from "./icons/updownicon";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <div className="flex w-50 h-10">
           <Logo />
           <div>
-            <p className="font-semibold text-lg">AngAng</p>
+            <p className="font-semibold text-lg">LolLol</p>
 
             <p className="text-xs font-normal text-[#71717A]">Swift delivery</p>
           </div>
@@ -30,24 +31,44 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full h-[1024px] bg-[#E4E4E5] ">
-        <div className="w-[1100px] m-auto rounded-md mt-10">
-          <div className="flex justify-end h-10 w-full">
-            <img className="w-9 h-9" src="icon.png"></img>
-          </div>
-          <div className="w-full h-[820px] bg-white flex">
-            <div className="w-500  mr-10">
-              <p className="font-bold">Orders</p>
-              <p className="font-medium text-xs text-[#71717A]">32 items</p>
-            </div>
-            <div className="w-500  flex justify-end ml-10 ">
-              <div className="border-2 rounded-2xl border-[#E4E4E7]">
-                <input type="date"></input>
-                <input type="date"></input>
+        <div className="w-full flex justify-end mt-10 pr-8">
+          <img className="w-9 h-9" src="icon.png" />
+        </div>
+        <div className="w-full flex justify-center mt-5 rounded-2xl">
+          <div className="w-280 h-400 bg-white">
+            <div className="w-280 h-18 flex items-center ">
+              <div className="w-140 pl-2">
+                <p className="text-xl font-bold">Orders</p>
+                <p className="text-[#71717A] font-meduim text-xs">32 Items</p>
               </div>
-              <div>
-                <button className="cursor-pointer">
-                  Change delivery State
+              <div className="flex justify-end w-140 gap-2 pr-2">
+                <div className="border  rounded-2xl">
+                  <input type="date" />
+                  <input type="date" />
+                </div>
+                <button className="border cursor-pointer rounded-2xl">
+                  Change Delivery State
                 </button>
+              </div>
+            </div>
+            <div className="w-full h-10 bg-[#E4E4E7] flex items-center">
+              <div className="w-24 h-12 flex items-center  justify-evenly">
+                <input type="checkbox" />
+                <p>№</p>
+              </div>
+              <div className="w-260 h-12 flex items-center justify-evenly text-[#71717A]">
+                <p>Customer</p>
+                <p>Food</p>
+                <div className="flex h-12 items-center gap-5">
+                  <p>Date</p>
+                  <UpDownIcon />
+                </div>
+                <p>Total </p>
+                <p>Delivery Address</p>
+                <div className="flex h-12 items-center gap-5">
+                  <p>Delivery state</p>
+                  <UpDownIcon />
+                </div>
               </div>
             </div>
           </div>

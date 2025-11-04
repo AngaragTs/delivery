@@ -52,30 +52,6 @@ export default function Home() {
               <div className="w-60 h-50 border rounded-2xl flex justify-center">
                 sdfdsf
               </div>
-              <div className="w-60 h-50 border rounded-2xl flex justify-center">
-                sdfdsf
-              </div>
-              <div className="w-60 h-50 border rounded-2xl flex justify-center">
-                sdfdsf
-              </div>
-              <div className="w-60 h-50 border rounded-2xl flex justify-center">
-                sdfdsf
-              </div>
-              <div className="w-60 h-50 border rounded-2xl flex justify-center">
-                sdfdsf
-              </div>
-              <div className="w-60 h-50 border rounded-2xl flex justify-center">
-                sdfdsf
-              </div>
-              <div className="w-60 h-50 border rounded-2xl flex justify-center">
-                sdfdsf
-              </div>
-              <div className="w-60 h-50 border rounded-2xl flex justify-center">
-                sdfdsf
-              </div>
-              <div className="w-60 h-50 border rounded-2xl flex justify-center">
-                sdfdsf
-              </div>
             </div>
           </div>
         </div>
