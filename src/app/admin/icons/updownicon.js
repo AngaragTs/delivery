@@ -10,8 +10,8 @@ export const UpDownIcon = () => {
       <path
         d="M0.5 7.83333L3.83333 11.1667L7.16667 7.83333M0.5 3.83333L3.83333 0.5L7.16667 3.83333"
         stroke="#09090B"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
