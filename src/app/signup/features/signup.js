@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function home() {
+export const Signup = () => {
   const router = useRouter();
 
   const [email, setEmail] = useState("");
@@ -40,38 +40,26 @@ export default function home() {
     <div className="w-full h-280 flex  justify-center items-center gap-10">
       <div className="w-100 h-94">
         <div className="w-full h-20">
-          <p className="font-semibold text-2xl">Log in</p>
+          <p className="font-semibold text-2xl">Create your account</p>
           <p className="text-[#71717A]">
-            Log in to enjoy your favorite dishes.
+            Sign up to explore your favorite dishes.
           </p>
         </div>
-        <div className="w-full h-30 gap-5">
+        <div className="w-full h-15">
           <input
             placeholder="Enter your email address"
             className="border border-[#E4E4E7] w-full h-9 pl-2"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></input>
-          <input
-            placeholder="Password"
-            className="border border-[#E4E4E7] w-full h-9 mt-2 pl-2"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          ></input>
-          <button>
-            <p>Forgot password ?</p>
-          </button>
         </div>
-        <button
-          onClick={handleSubmit}
-          className="w-full h-9 flex justify-center bg-black text-white items-center cursor-pointer"
-        >
+        <button className="w-full h-9 flex justify-center bg-black text-white items-center cursor-pointer">
           Let's Go
         </button>
         <div className="w-full h-9 flex">
-          <p className="text-[#71717A]">Dont have an account?</p>
-          <Link href={"/signup"} className="text-[#2563EB] cursor-pointer">
-            Sign up
+          <p className="text-[#71717A]">Already have an account?</p>
+          <Link href={"/login"} className="text-[#2563EB] cursor-pointer">
+            Log in
           </Link>
         </div>
       </div>
@@ -81,4 +69,4 @@ export default function home() {
       </div>
     </div>
   );
-}
+};
