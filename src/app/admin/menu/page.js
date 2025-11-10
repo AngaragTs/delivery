@@ -12,6 +12,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Link from "next/link";
+import { Head } from "./component/product";
 const options = {
   method: "GET",
   headers: {
@@ -31,6 +32,7 @@ export default function Home() {
   useEffect(() => {
     getData();
   }, []);
+
   return (
     <div className="w-full  flex m-auto">
       <div className="w-80 bg-white gap-10 mt-10 flex justify-center">
@@ -73,28 +75,34 @@ export default function Home() {
                   {foodCategoryData.map((category, index) => {
                     return (
                       <button
-                        className="cursor-pointer rounded-xl w-auto p-2 border"
+                        className="cursor-pointer rounded-xl w-auto p-2 border flex gap-2"
                         key={index}
                       >
                         {category.categoryName}
+                        <div className="bg-black rounded-2xl h-6 w-6">
+                          <p className="text-white">{category.food}</p>
+                        </div>
                       </button>
                     );
                   })}
 
                   <button className="cursor-pointer rounded-2xl w-auto p-2 border bg-[#EF4444]">
                     <Dialog>
-                      <DialogTrigger>+</DialogTrigger>
+                      <DialogTrigger asChild>+</DialogTrigger>
                       <DialogContent>
                         <DialogHeader>
                           <DialogTitle>Add new category</DialogTitle>
                           <DialogDescription>
                             <div>
-                              <p>Category Name</p>
-                              <input className="h-9 w-100 gap-2 border"></input>
+                              <p className="text-[#09090B]">Category Name</p>
+                              <input
+                                placeholder="Type category name..."
+                                className="h-9 w-100 gap-2 border pl-1 text-black"
+                              ></input>
                             </div>
-                            <div className="bg-black text-white mt-5 h-10 w-30 flex justify-end">
+                            <div className="bg-black text-white mt-5 h-10 w-30 flex justify-center">
                               <button className="cursor-pointer">
-                                <p>Add Category</p>
+                                Add Category
                               </button>
                             </div>
                           </DialogDescription>
@@ -108,36 +116,16 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-220 overflow-y-scroll">
-          <div className="flex  justify-center mt-5">
-            <div className="w-460 h-80 bg-white rounded-2xl ">
-              <p className="font-semibold mt-2 ml-2">Appetizers</p>
-              <div className="w-full  rounded-2xl ml-2 flex-wrap flex p-2 gap-2 ">
-                <div className="w-60 h-50 border rounded-2xl flex justify-center items-center border-dashed border-red-700">
-                  <button className="w-10 h-10 rounded-3xl bg-[#EF4444] flex items-center  justify-center cursor-pointer">
-                    +
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex  justify-center mt-5">
-            <div className="w-460 h-80 bg-white rounded-2xl">
-              <p className="font-semibold mt-2 ml-2">Appetizers</p>
-              <div className="flex ">
-                <div className="w-full  rounded-2xl ml-2 flex-wrap flex p-2 gap-2 ">
-                  <div className="w-60 h-50 border rounded-2xl flex justify-center items-center">
-                    <button className="w-10 h-10 rounded-3xl bg-[#EF4444] flex items-center  justify-center cursor-pointer">
-                      +
-                    </button>
-                  </div>
-                </div>
-                <div className="w-full  rounded-2xl ml-2 flex-wrap flex p-2 gap-2">
-                  <div className="w-60 h-50 border rounded-2xl flex justify-center items-center">
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="flex  flex-col items-center ">
+            {foodCategoryData.map((category) => {
+              return (
+                <Head
+                  categoryName={category.categoryName}
+                  key={category._id}
+                  category={category}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

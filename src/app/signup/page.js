@@ -1,11 +1,12 @@
 "use client";
 
-import { Signup } from "./features/signup";
+import { Signup } from "./features/email";
+import { CreatePassword } from "./features/password";
 
 export default function home() {
   return (
     <div>
-      <Signup />
+      <CreatePassword />
     </div>
   );
 }

@@ -54,6 +54,7 @@ export default function home() {
           ></input>
           <input
             placeholder="Password"
+            type="Password"
             className="border border-[#E4E4E7] w-full h-9 mt-2 pl-2"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
