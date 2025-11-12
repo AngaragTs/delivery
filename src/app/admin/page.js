@@ -100,8 +100,30 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             <div className="w-460 h-10 bg-[#E4E4E7] flex items-center">
+              <div className="w-24 h-12 flex items-center  justify-evenly">
+                <input type="checkbox" />
+                <p>1</p>
+              </div>
+              <div className="w-460 h-12 flex items-center justify-evenly text-[#71717A]">
+                <p>Customer</p>
+                <p className="flex items-center gap-8">
+                  Food <DownIcon />
+                </p>
+                <div className="flex h-12 items-center gap-5">
+                  <p>Date</p>
+                  <UpDownIcon />
+                </div>
+                <p>Total </p>
+                <p>Delivery Address</p>
+                <div className="flex h-12 items-center gap-5">
+                  <p>Delivery state</p>
+                  <UpDownIcon />
+                </div>
+              </div>
+            </div>
+
+            {/* <div className="w-460 h-10 bg-[#E4E4E7] flex items-center">
               <div className="w-24 h-12 flex items-center  justify-evenly">
                 <input type="checkbox" />
                 <p>1</p>
@@ -141,7 +163,7 @@ export default function Home() {
                   </SelectContent>
                 </Select>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="w-460">
